@@ -2,7 +2,7 @@
 
 ## Case Summary
 This case simulates a digital forensic investigation involving a Windows 11
-workstation suspected of unauthorized access to sensitive compay data. The 
+workstation suspected of unauthorized access to sensitive company data. The 
 "suspect" allegedly accessed confidential files, attempted to delete evidence,
 and cleared browser history to cover their tracks. 
 
@@ -31,8 +31,8 @@ A user on a corporate workstation is suspected of:
 
 **Hash Verification:**
 | Hash Type | Value |
-|- - - - - -|- - - -|
-| MD5  | ecfcbba56596c1d2225a2093dacec1D |
+|---|---| 
+| MD5  | ecfcbba56596c1d2225a20935dacec1d |
 | SHA1 | 62173c5309c33ca177eb099155c19242fd9cc253 |
 
 Both source and image hashes matched - verification **PASSED**.
