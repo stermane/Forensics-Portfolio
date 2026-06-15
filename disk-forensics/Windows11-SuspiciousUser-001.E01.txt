@@ -1,0 +1,66 @@
+﻿Created By ExterroÂ® FTKÂ® Imager 8.2.0.59 
+
+Case Information: 
+Case Number: 2026-001
+Evidence Number: 1
+Unique description: SuspiciousUser Activity
+Examiner: E. Sterman
+Notes:  
+
+--------------------------------------------------------------
+
+Information for F:\Forensic Images\Windows11-SuspiciousUser-001:
+
+Physical Evidentiary Item (Source) Information:
+  [Device Info]
+    Source Type: Logical
+  [Drive Geometry]
+    Bytes per Sector: 512
+    Sector Count: 207,669,248
+  [Physical Drive Information]
+    Removable drive: False
+    Source data size: 101401 MB
+    Sector count:    207669248
+  [Computed Hashes]
+    MD5 Hash:    ecfcbba56596c1d2225a20935dacec1d
+    SHA1 Hash:   62173c5309c33ca177eb099155c19242fd9cc253
+
+Verification Definitions:
+  Computed hash: The hash calculated of the source media during the creation or verify process
+  Stored verification hash: The hash calculated during image acquisition and stored inside the image
+  Report hash: The hash calculated during image acquisition and stored in the image summary report
+
+Image Information:
+  Acquisition started:   Fri Jun 12 16:22:46 2026 (2026-06-12T21:22:46Z)
+  Acquisition finished:  Fri Jun 12 16:44:33 2026 (2026-06-12T21:44:33Z)
+  Segment list:
+    F:\Forensic Images\Windows11-SuspiciousUser-001.E01
+    F:\Forensic Images\Windows11-SuspiciousUser-001.E02
+    F:\Forensic Images\Windows11-SuspiciousUser-001.E03
+    F:\Forensic Images\Windows11-SuspiciousUser-001.E04
+    F:\Forensic Images\Windows11-SuspiciousUser-001.E05
+    F:\Forensic Images\Windows11-SuspiciousUser-001.E06
+    F:\Forensic Images\Windows11-SuspiciousUser-001.E07
+    F:\Forensic Images\Windows11-SuspiciousUser-001.E08
+    F:\Forensic Images\Windows11-SuspiciousUser-001.E09
+    F:\Forensic Images\Windows11-SuspiciousUser-001.E10
+    F:\Forensic Images\Windows11-SuspiciousUser-001.E11
+    F:\Forensic Images\Windows11-SuspiciousUser-001.E12
+    F:\Forensic Images\Windows11-SuspiciousUser-001.E13
+    F:\Forensic Images\Windows11-SuspiciousUser-001.E14
+    F:\Forensic Images\Windows11-SuspiciousUser-001.E15
+    F:\Forensic Images\Windows11-SuspiciousUser-001.E16
+    F:\Forensic Images\Windows11-SuspiciousUser-001.E17
+    F:\Forensic Images\Windows11-SuspiciousUser-001.E18
+    F:\Forensic Images\Windows11-SuspiciousUser-001.E19
+    F:\Forensic Images\Windows11-SuspiciousUser-001.E20
+
+Image Verification Results:
+  Verification started:  Fri Jun 12 16:44:35 2026 (2026-06-12T21:44:35Z)
+  Verification finished: Fri Jun 12 17:05:49 2026 (2026-06-12T22:05:49Z)
+  MD5 - Computed hash:             ecfcbba56596c1d2225a20935dacec1d : verified
+  MD5 - Stored verification hash:  ecfcbba56596c1d2225a20935dacec1d : verified
+  MD5 - Report hash:               ecfcbba56596c1d2225a20935dacec1d : verified
+  SHA1 - Computed hash:            62173c5309c33ca177eb099155c19242fd9cc253 : verified
+  SHA1 - Stored verification hash: 62173c5309c33ca177eb099155c19242fd9cc253 : verified
+  SHA1 - Report hash:              62173c5309c33ca177eb099155c19242fd9cc253 : verified
