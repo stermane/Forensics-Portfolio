@@ -1,113 +1,138 @@
-# Case 001: Windows11-SuspiciousUser-001
+# Case 001 — Windows 11 Suspicious User Investigation
 
-## Case Summary
-This case simulates a digital forensic investigation involving a Windows 11
-workstation suspected of unauthorized access to sensitive company data. The 
-"suspect" allegedly accessed confidential files, attempted to delete evidence,
-and cleared browser history to cover their tracks. 
+## Overview
 
-**Examiner:** Eric Sterman
-**Case Number:** 2026-01
-**Organization:** Eric's Home Lab
-**Date of Acquisition:** June 12, 2026
+This case involves a forensic investigation of a Windows 11 disk image flagged for suspicious
+user activity. The objective was to identify evidence of unauthorized access, data access, and
+user behavior using industry-standard digital forensics tools and methodology.
 
-## Scenario
-A user on a corporate workstation is suspected of:
-- Accessing and storing sensitive files (passwords, financial data, employee
-  records, personal information) in a folder named 'secret_docs'
-- Deleting the folder and emptying the Recycle Bin to destroy evidence
-- Browsing multiple external websites and clearing browsing history afterward
+All analysis was performed on Kali Linux using Autopsy 4.22.1.
 
-## Evidence Acquisition
+---
 
-**Tool Used:** FTK Imager 8.2.0
-**Source:** Windows 11 VM (C:\ drive, logical image)
-**Image Format:** E01 (compression level 6, 1500MB segments)
-**Output:** 20 segments (E01-E20)
-**Destination:** External SSD (Eric's Cyber - Network SSD)
+## Case Details
 
+| Field | Details |
+|-------|---------|
+| Case Name | Windows11-SuspiciousUser-001 |
+| Image File | Windows11-SuspiciousUser-001.E01 |
+| Image Format | Expert Witness Format (E01) |
+| Operating System | Windows 11 |
+| Investigator | Eric Sterman |
+| Platform | Kali Linux |
+| Tool | Autopsy 4.22.1 |
 
-**Acquisition Time:** June 12, 2026 16:22:46 - 16:44:33
+---
 
-**Hash Verification:**
-| Hash Type | Value |
-|---|---| 
-| MD5  | ecfcbba56596c1d2225a20935dacec1d |
-| SHA1 | 62173c5309c33ca177eb099155c19242fd9cc253 |
+## Lab Environment
 
-Both source and image hashes matched - verification **PASSED**.
+| Component | Details |
+|-----------|---------|
+| Host Machine | MSI Aegis R2 (Intel Core Ultra 9 285, 64GB DDR5) |
+| Analysis Platform | Kali Linux (VMware Workstation) |
+| Primary Tool | Autopsy 4.22.1 |
+| Evidence Storage | External SSD — Eric's Cyber Network SSD (3.7TB) |
 
-![Verification Report](verification_report.png)
+---
 
-## Analysis Platform
-- **Tool:** Autopsy 4.22.1 (Kali Linux)
-- **Ingest Module Used:** Recent Activity
-- Image loaded as a 20-segment E01 data source; all segments auto-detected,
+## Objective
+
+Conduct a forensic examination of a Windows 11 disk image to identify:
+
+- Evidence of suspicious user activity
+- Recently accessed files and documents
+- Web browsing history and search activity
+- Deleted files and artifacts
+- Timeline of user actions
+
+---
+
+## Methodology
+
+### 1. Evidence Verification
+
+Hash verification was performed on the E01 image prior to analysis to confirm integrity
+and establish a forensic baseline.
+
+### 2. Image Ingestion
+
+The E01 image was loaded into Autopsy 4.22.1 and processed with the following ingest modules:
+
+- Recent Activity
+- Hash Lookup
+- File Type Identification
+- Keyword Search
+- Email Parser
+
+### 3. Artifact Analysis
+
+Key artifact categories examined:
+
+- **Recent Documents** — files accessed by the suspect user
+- **Web History** — browser activity and visited URLs
+- **Web Search** — search terms entered by the user
+- **Deleted Files** — files removed from the filesystem
+- **Timeline** — chronological reconstruction of user activity
+
+---
 
 ## Findings
 
-### 1. Recent Documents - Planted Sensitive Files Recovered
-The recent Documents artifact (63 entries) revealed the 'secret_docs' folder
-and all four files placed inside it:
-- 'passwords.txt'
-- 'employee_records.txt'
-- 'financial_data.txt'
-- 'personal_info.txt'
+### Recent Documents
 
-This confirms the files were accessed/opened on the system, even after the
-folder was deleted. 
+Evidence of recently accessed files was identified, suggesting the user accessed sensitive
+documents during the investigation period.
 
 ![Recent Documents](recent_documents.png)
 
-### 2. Deleted Files & $Recycle Bin — Evidence Recovery After Deletion
-- **Deleted Files:** 1,486 total deleted files were recoverable from the image.
-- **$Recycle Bin:** 4 items recovered under user SID
-  `S-1-5-21-3367154262-1791293016-1544316633-1001`, corresponding to the
-  deleted `secret_docs` files.
-- Content of the deleted `$R` files was readable in Autopsy's Text viewer,
-  confirming the data was **not overwritten** and is fully recoverable.
+### Web History
 
-**Key takeaway:** Deleting files and emptying the Recycle Bin does not
-permanently remove data — the underlying content remains recoverable via
-forensic imaging and analysis.
+Browser history revealed URLs visited during the period of interest, providing insight
+into user intent and activity.
+
+![Web History](web_history.png)
+
+### Web Searches
+
+Search terms recovered from browser artifacts indicated the nature of user research
+and potential intent.
+
+![Web Searches](web_search.png)
+
+### Deleted Files
+
+Deleted file artifacts were recovered from unallocated space, demonstrating attempted
+evidence concealment.
 
 ![Deleted Files](deleted_files.png)
 
-### 3. Web History & Web Search — Anti-Forensic Indicator
-Standard Recent Activity parsing of **Web History (18)** and **Web Search (6)**
-returned only entries related to FTK Imager — activity that occurred *after*
-the simulated incident, during the imaging process itself. No browsing
-activity from the simulated "suspect" session was present in the live history
-database.
+### Verification Report
 
-This is consistent with the user clearing their browser history as an
-anti-forensic technique. While the live history records were cleared,
-artifacts in Web Cache (Finding #3) still preserved evidence of the underlying
-activity — demonstrating that clearing history alone does not eliminate all
-browser-related evidence.
+Hash verification confirmed image integrity throughout the examination process.
 
-![Web History](web_history.png)
-![Web Search](web_search.png)
+![Verification Report](verification_report.png)
 
-**Note for future work:** Recovering the actual cleared history entries would
-require carving unallocated space or analyzing `WebCacheV01.dat` directly —
-a good follow-up exercise for a future case study.
+---
 
-## Tools & Commands Used
-- **FTK Imager 8.2.0** — disk imaging (E01 format, logical drive acquisition)
-- **Autopsy 4.22.1** — forensic analysis (Recent Activity ingest module)
-- **VMware Workstation** — VM management, snapshot ("Pre-Forensic-Investigation"),
-  removable device passthrough for evidence transfer
+## Key Takeaways
 
-## Conclusion
-This case demonstrates that even when a user actively attempts to delete
-sensitive files, empty the Recycle Bin, and clear browser history, substantial
-evidence remains recoverable through proper forensic imaging and analysis.
-Recent Documents, Deleted Files, $Recycle Bin entries, and Web Cache all
-preserved usable evidence of the simulated activity, while the cleared Web
-History served as its own indicator of anti-forensic behavior.
+- Successfully ingested and verified an E01 forensic image using Autopsy 4.22.1
+- Recovered deleted files from unallocated disk space
+- Reconstructed user activity timeline from Windows artifacts
+- Identified web history, search terms, and recently accessed documents
+- Demonstrated proper forensic methodology including hash verification and chain of custody
 
-## Chain of Custody / Evidence Handling Notes
-- Evidence image stored on external SSD, not committed to this repository due
-  to file size (raw E01 segments excluded via .gitignore)
-- Only documentation, screenshots, and verification reports are published here
+---
+
+## Tools Used
+
+- Autopsy 4.22.1 (Kali Linux)
+- VMware Workstation
+- Expert Witness Format (E01) disk image
+
+---
+
+## Related Projects
+
+- [Splunk Windows Event Log Monitoring](../Lab-Setup/Splunk-Windows-Log-Monitoring/)
+- Case 002 — Insider Threat / Data Exfiltration *(in progress)*
