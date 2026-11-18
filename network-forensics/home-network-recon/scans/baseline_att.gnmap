@@ -1,0 +1,4 @@
+# Nmap 7.991 scan initiated Wed Nov 18 14:48:45 2026 as: /usr/lib/nmap/nmap -e eth2 -sV -sC -O -oA scans/baseline_att 192.168.1.254
+Host: 192.168.1.254 ()	Status: Up
+Host: 192.168.1.254 ()	Ports: 53/open/tcp//domain//Unbound 1.22.0/, 80/open/tcp//http//lighttpd 1.4.69/, 443/open/tcp//ssl|http//lighttpd 1.4.69/	Ignored State: closed (997)	Seq Index: 259	IP ID Seq: All zeros
+# Nmap done at Wed Nov 18 14:49:26 2026 -- 1 IP address (1 host up) scanned in 41.25 seconds

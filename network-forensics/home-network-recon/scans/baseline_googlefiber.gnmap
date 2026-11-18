@@ -1,0 +1,4 @@
+# Nmap 7.991 scan initiated Wed Nov 18 15:15:00 2026 as: /usr/lib/nmap/nmap -e eth2 -sV -sC -O -oA scans/baseline_googlefiber 192.168.137.254
+Host: 192.168.137.254 (router.local)	Status: Up
+Host: 192.168.137.254 (router.local)	Ports: 24/open/tcp//http//Boa HTTPd 0.94.14rc21/, 53/open/tcp//domain//(unknown banner: dnsmasq-)/, 49152/open/tcp//upnp//Cisco-Linksys E4200 WAP upnpd (UPnP 1.0)/, 52869/open/tcp//upnp//MiniUPnP/	Ignored State: closed (996)	Seq Index: 258	IP ID Seq: All zeros
+# Nmap done at Wed Nov 18 15:16:43 2026 -- 1 IP address (1 host up) scanned in 103.60 seconds

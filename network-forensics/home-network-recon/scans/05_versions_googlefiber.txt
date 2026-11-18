@@ -1,0 +1,18 @@
+# Nmap 7.991 scan initiated Wed Nov 18 15:08:02 2026 as: /usr/lib/nmap/nmap -e eth2 -n -sV -p 24,53,49152,52869 -oN scans/05_versions_googlefiber.txt 192.168.137.254
+Nmap scan report for 192.168.137.254
+Host is up (0.00071s latency).
+
+PORT      STATE SERVICE VERSION
+24/tcp    open  http    Boa HTTPd 0.94.14rc21
+53/tcp    open  domain  (unknown banner: dnsmasq-)
+49152/tcp open  upnp    Cisco-Linksys E4200 WAP upnpd (UPnP 1.0)
+52869/tcp open  upnp    MiniUPnP
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port53-TCP:V=7.991%I=7%D=11/18%Time=6AFE13BD%P=x86_64-pc-linux-gnu%r(DN
+SF:SVersionBindReqTCP,35,"\x003\0\x06\x85\x80\0\x01\0\x01\0\0\0\0\x07versi
+SF:on\x04bind\0\0\x10\0\x03\xc0\x0c\0\x10\0\x03\0\0\0\0\0\t\x08dnsmasq-");
+MAC Address: XX:XX:XX:XX:XX:XX (ShenZhen ZhongRuiJing Technology)
+Service Info: CPE: cpe:/h:cisco:e4200
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Nov 18 15:09:26 2026 -- 1 IP address (1 host up) scanned in 83.85 seconds

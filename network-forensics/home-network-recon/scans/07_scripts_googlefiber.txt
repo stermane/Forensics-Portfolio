@@ -1,0 +1,15 @@
+# Nmap 7.991 scan initiated Wed Nov 18 15:24:39 2026 as: /usr/lib/nmap/nmap -e eth2 -n -sC -p 24,53,10081,49152,52869 -oN scans/07_scripts_googlefiber.txt 192.168.137.254
+Nmap scan report for 192.168.137.254
+Host is up (0.00076s latency).
+
+PORT      STATE SERVICE
+24/tcp    open  priv-mail
+53/tcp    open  domain
+| dns-nsid: 
+|_  bind.version: dnsmasq-
+10081/tcp open  famdc
+49152/tcp open  unknown
+52869/tcp open  unknown
+MAC Address: XX:XX:XX:XX:XX:XX (ShenZhen ZhongRuiJing Technology)
+
+# Nmap done at Wed Nov 18 15:25:35 2026 -- 1 IP address (1 host up) scanned in 56.34 seconds

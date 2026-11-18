@@ -1,0 +1,13 @@
+# Nmap 7.991 scan initiated Wed Nov 18 15:02:41 2026 as: /usr/lib/nmap/nmap -e eth2 -p- -T4 --min-rate 1000 -oN scans/03_all-tcp_googlefiber.txt 192.168.137.254
+Nmap scan report for router.local (192.168.137.254)
+Host is up (0.0036s latency).
+Not shown: 65530 closed tcp ports (reset)
+PORT      STATE SERVICE
+24/tcp    open  priv-mail
+53/tcp    open  domain
+10081/tcp open  famdc
+49152/tcp open  unknown
+52869/tcp open  unknown
+MAC Address: XX:XX:XX:XX:XX:XX (ShenZhen ZhongRuiJing Technology)
+
+# Nmap done at Wed Nov 18 15:02:51 2026 -- 1 IP address (1 host up) scanned in 10.07 seconds

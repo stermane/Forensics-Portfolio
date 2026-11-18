@@ -1,0 +1,20 @@
+# Nmap 7.991 scan initiated Wed Nov 18 14:35:41 2026 as: /usr/lib/nmap/nmap -e eth2 -p- -T4 --min-rate 1000 -oN scans/03_all-tcp_att.txt 192.168.1.254
+Nmap scan report for 192.168.1.254
+Host is up (0.0036s latency).
+Not shown: 65523 closed tcp ports (reset)
+PORT      STATE    SERVICE
+53/tcp    open     domain
+80/tcp    open     http
+443/tcp   open     https
+2080/tcp  open     autodesk-nlm
+7547/tcp  filtered cwmp
+10999/tcp filtered unknown
+49000/tcp filtered matahari
+51001/tcp filtered unknown
+51002/tcp filtered unknown
+51008/tcp open     unknown
+51010/tcp filtered unknown
+61001/tcp filtered unknown
+MAC Address: XX:XX:XX:XX:XX:XX (Humax)
+
+# Nmap done at Wed Nov 18 14:35:52 2026 -- 1 IP address (1 host up) scanned in 10.16 seconds

@@ -1,0 +1,26 @@
+# Nmap 7.991 scan initiated Wed Nov 18 14:47:16 2026 as: /usr/lib/nmap/nmap -e eth2 -sC -p 53,80,443,2080,51008 -oN scans/07_scripts_att.txt 192.168.1.254
+Nmap scan report for 192.168.1.254
+Host is up (0.0028s latency).
+
+PORT      STATE SERVICE
+53/tcp    open  domain
+| dns-nsid: 
+|   id.server: dsldevice
+|_  bind.version: unbound 1.22.0
+80/tcp    open  http
+|_http-title: Did not follow redirect to /cgi-bin/home.ha
+443/tcp   open  https
+|_ssl-date: TLS randomness does not represent time
+| ssl-cert: Subject: commonName=dsldevice.domain_not_set.invalid/organizationName=Arris Group, Inc./stateOrProvinceName=MA/countryName=US
+| Not valid before: 2015-06-01T14:20:44
+|_Not valid after:  2025-05-29T14:20:44
+| http-cookie-flags: 
+|   /: 
+|     SessionID: 
+|_      secure flag not set and HTTPS in use
+|_http-title: Did not follow redirect to /cgi-bin/home.ha
+2080/tcp  open  autodesk-nlm
+51008/tcp open  unknown
+MAC Address: XX:XX:XX:XX:XX:XX (Humax)
+
+# Nmap done at Wed Nov 18 14:47:34 2026 -- 1 IP address (1 host up) scanned in 17.55 seconds

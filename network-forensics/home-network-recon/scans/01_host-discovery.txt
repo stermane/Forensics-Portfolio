@@ -1,0 +1,8 @@
+# Nmap 7.991 scan initiated Mon Nov 16 16:54:19 2026 as: /usr/lib/nmap/nmap -e eth2 -sn -oN scans/01_host-discovery.txt 192.168.137.0/24
+Nmap scan report for 192.168.137.100
+Host is up (0.00028s latency).
+MAC Address: XX:XX:XX:XX:XX:XX (Micro-Star Intl)
+Nmap scan report for router.local (192.168.137.254)
+Host is up (0.00058s latency).
+MAC Address: XX:XX:XX:XX:XX:XX (ShenZhen ZhongRuiJing Technology)
+# Nmap done at Mon Nov 16 16:54:26 2026 -- 256 IP addresses (2 hosts up) scanned in 6.51 seconds

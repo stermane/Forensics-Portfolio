@@ -1,0 +1,29 @@
+# Nmap 7.991 scan initiated Wed Nov 18 15:10:40 2026 as: /usr/lib/nmap/nmap -e eth2 -O -oN scans/06_os_googlefiber.txt 192.168.137.254
+Nmap scan report for router.local (192.168.137.254)
+Host is up (0.0015s latency).
+Not shown: 996 closed tcp ports (reset)
+PORT      STATE SERVICE
+24/tcp    open  priv-mail
+53/tcp    open  domain
+49152/tcp open  unknown
+52869/tcp open  unknown
+MAC Address: XX:XX:XX:XX:XX:XX (ShenZhen ZhongRuiJing Technology)
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.991%E=4%D=11/18%OT=24%CT=1%CU=40095%PV=Y%DS=1%DC=D%G=Y%M=188B15
+OS:%TM=6AFE145C%P=x86_64-pc-linux-gnu)SEQ(SP=101%GCD=1%ISR=107%TI=Z%CI=I%TS
+OS:=7)SEQ(SP=101%GCD=1%ISR=110%TI=Z%CI=I%TS=7)SEQ(SP=103%GCD=1%ISR=10D%TI=Z
+OS:%CI=I%II=I%TS=7)SEQ(SP=107%GCD=1%ISR=108%TI=Z%CI=I%TS=7)SEQ(SP=109%GCD=1
+OS:%ISR=107%TI=Z%CI=I%TS=7)OPS(O1=M5B4ST11NW4%O2=M5B4ST11NW4%O3=M5B4NNT11NW
+OS:4%O4=M5B4ST11NW4%O5=M5B4ST11NW4%O6=M5B4ST11)WIN(W1=7120%W2=7120%W3=7120%
+OS:W4=7120%W5=7120%W6=7120)ECN(R=Y%DF=Y%T=40%W=7210%O=M5B4NNSNW4%CC=Y%Q=)T1
+OS:(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%
+OS:S=A%A=Z%F=R%O=%RD=B1C2A1A3%Q=)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=B
+OS:1C2A1A3%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=B1C2A1A3%Q=)T7(R=Y%DF=
+OS:Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=B1C2A1A3%Q=)U1(R=Y%DF=N%T=40%IPL=164%UN=0
+OS:%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=N)IE(R=Y%DFI=N%T=40%CD=S)
+
+Network Distance: 1 hop
+
+OS detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Nov 18 15:10:52 2026 -- 1 IP address (1 host up) scanned in 11.70 seconds

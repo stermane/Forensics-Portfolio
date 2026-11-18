@@ -1,0 +1,10 @@
+# Nmap 7.991 scan initiated Wed Nov 18 15:27:09 2026 as: /usr/lib/nmap/nmap -e eth2 -n -sV -p 10081 -oN scans/05b_version_10081_googlefiber.txt 192.168.137.254
+Nmap scan report for 192.168.137.254
+Host is up (0.00056s latency).
+
+PORT      STATE SERVICE VERSION
+10081/tcp open  famdc?
+MAC Address: XX:XX:XX:XX:XX:XX (ShenZhen ZhongRuiJing Technology)
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Nov 18 15:29:46 2026 -- 1 IP address (1 host up) scanned in 157.40 seconds
